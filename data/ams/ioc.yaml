@@ -1,0 +1,50 @@
+module_info:
+  module_name: f"test_module_name_{mode_i}"
+  case_infos:
+    - {
+        "case_name": "test_case_{case_i}",
+        "api": "/s-park/statistics/api/vehicle/getTodayInout",
+        "method": "POST",
+        "request_data": {
+          "parkExternalId": "529"
+        },
+        "assert_data": {
+
+          "success": true,
+          "result.enterParkVehicleNumber.total": "${>}0",
+          "result.inParkVehicleNumber.total": "${>}0",
+          "result.leaveParkVehicleNumber.total": "${>}0",
+        },
+        "store_var" : {},
+        "headers" : {
+          "content_type": "application/json;charset=UTF-8",
+        },
+        "allure_info": {
+          "story": "园区IOC",
+          "description": "查看IOC出入园",
+          "title": "宝山园区IOC出入园看板当日出入园为0"
+        }
+      }
+    - {
+        "case_name": "test_case_{case_i}",
+        "api": "/statistics/iocLargeScreen/electricData",
+        "method": "POST",
+        "request_data": {
+          "parkExternalId": "529",
+          "isUseJoinCal": 0,
+          "meterCodeList": ["21088001959", "21088001958", "21088001963", "21088001964", "21088001966", "21088001967", "21088001970", "21088001971", "21088002270", "21088002271"]
+        },
+        "assert_data": {
+          "success": true,
+          "result.todayUse": "${>}0"
+        },
+        "store_var": {},
+        "headers": {
+          "content_type": "application/json;charset=UTF-8",
+        },
+        "allure_info": {
+          "story": "园区IOC",
+          "description": "查看IOC能耗",
+          "title": "宝山园区IOC能耗看板当日用电量为0"
+        }
+      }
