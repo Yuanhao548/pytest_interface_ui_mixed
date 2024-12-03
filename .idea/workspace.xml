@@ -10,7 +10,6 @@
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/common/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/common/generate_cases_file.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/common/request.py" afterDir="false" />
@@ -20,6 +19,7 @@
       <change afterPath="$PROJECT_DIR$/setting.ini" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/testCases/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/testCases/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
