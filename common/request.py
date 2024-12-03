@@ -74,6 +74,10 @@ class WebDriver:
         self.pass_word = pass_word
 
     def login(self):
+        # 获取 ChromeDriver 的版本号
+        version = self.driver.capabilities['chrome']['chromedriverVersion']
+        print(f"ChromeDriver Version: {version}")
+
         selenium_cookies = None
         self.driver.implicitly_wait(100)
         try:
