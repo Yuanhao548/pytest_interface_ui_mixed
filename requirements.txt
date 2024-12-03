@@ -1,6 +1,6 @@
 allure-python-commons==2.8.6
 attrs==24.2.0
-brotli-python==1.0.9
+brotli-python
 certifi==2024.8.30
 charset-normalizer==3.3.2
 exceptiongroup==1.2.2

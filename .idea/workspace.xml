@@ -20,6 +20,7 @@
       <change afterPath="$PROJECT_DIR$/setting.ini" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/testCases/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/testCases/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +37,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -45,29 +49,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python tests.Python tests for demo.test_example.executor": "Run",
-    "Python tests.Python tests for test_module_name_1.test_1.executor": "Run",
-    "Python tests.Python tests for test_module_name_1.test_case_1.executor": "Run",
-    "Python tests.Python tests for test_module_name_1.test_case_2.executor": "Run",
-    "Python tests.Python tests in test_module_name_1.py (1).executor": "Run",
-    "Python tests.Python tests in test_module_name_1.py.executor": "Run",
-    "Python.core.executor": "Run",
-    "Python.demo (1).executor": "Run",
-    "Python.demo.executor": "Run",
-    "Python.generate_cases_file.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.request.executor": "Run",
-    "Python.test_module_name_1.executor": "Run",
-    "Python.utils.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/hyuan2/project/amsApiAutoTest/data",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for demo.test_example.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_module_name_1.test_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_module_name_1.test_case_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_module_name_1.test_case_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_module_name_1.py (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_module_name_1.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.core.executor&quot;: &quot;Run&quot;,
+    &quot;Python.demo (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.demo.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generate_cases_file.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.request.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_module_name_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hyuan2/project/amsApiAutoTest/data&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data" />
@@ -233,5 +237,28 @@
       <updated>1730969871107</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
