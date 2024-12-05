@@ -67,16 +67,15 @@ class RestClient:
 
 class WebDriver:
     # 配置Selenium WebDriver
-    driver = webdriver.Chrome(options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
-    # if platform.system() == 'Linux':
-    #     # 指定 chromedriver 的路径
-    #     print("当前环境是linux")
-    #     service = ChromeService(executable_path='/usr/local/bin/chromedriver')
-    #     driver = webdriver.Chrome(service=service, options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
-    # else:
-    #     print("当前环境是mac")
-    #     driver = webdriver.Chrome(options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
-    #     # driver = webdriver.Chrome()  # 请确保已安装ChromeDriver,显式启动浏览器
+    if platform.system() == 'Linux':
+        # 指定 chromedriver 的路径
+        print("当前环境是linux")
+        service = ChromeService()
+        driver = webdriver.Chrome(service=service, options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
+    else:
+        print("当前环境是mac")
+        driver = webdriver.Chrome(options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
+        # driver = webdriver.Chrome()  # 请确保已安装ChromeDriver,显式启动浏览器
 
     def __init__(self, login_page, user_name, pass_word):
         self.login_page = login_page
