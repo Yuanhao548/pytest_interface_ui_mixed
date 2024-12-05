@@ -92,6 +92,7 @@ class WebDriver:
         try:
             # 访问登录页面
             self.driver.get(self.login_page)
+            print('已进入登陆页面')
 
             # 使用JavaScript检查页面加载状态
             def is_page_loaded(driver):
@@ -102,6 +103,7 @@ class WebDriver:
             iframe_element = self.driver.find_element(By.TAG_NAME, "iframe")
             # 通过 WebElement 切换到 iframe
             self.driver.switch_to.frame(iframe_element)
+            print('已完成框架切换')
             different_type = self.driver.find_element(By.XPATH, "//*[text()='普通账号登录']")
             different_type.click()
             # 输入用户名和密码
@@ -114,6 +116,7 @@ class WebDriver:
             # """, username_input)
             username_input.send_keys(self.user_name)
             password_input.send_keys(self.pass_word)
+            print('已完成输入')
             login_button = self.driver.find_element(By.XPATH, "//div//button[contains(@class, 'submit-button')]")
             # 等待用户输入完成
             def input_is_complete(driver):
@@ -123,6 +126,7 @@ class WebDriver:
             time.sleep(2)
             login_button.click()
             time.sleep(60)
+            print('已执行登陆点击')
             selenium_cookies = self.driver.get_cookies()
             print('selenium_cookies: ', selenium_cookies)
         except Exception as e:
