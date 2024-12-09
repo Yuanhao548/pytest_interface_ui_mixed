@@ -57,8 +57,8 @@ def main():
     result_path = os.path.join(project_path, 'run_result', f'{datetime.now().date()}test_output.txt')
     with open(result_path, 'w') as f:
         # 重定向标准输出和标准错误
-        sys.stdout = f
-        sys.stderr = f
+        # sys.stdout = f
+        # sys.stderr = f
         # 运行测试
         pytest.main(['-s', '-v', 'testCases/', '--tb=long', '--junit-xml=test_results.xml'])
         # pytest.main(['-s', '-v', '--reruns', '3', 'testCases/'])
@@ -73,7 +73,7 @@ def main():
                                                                                                                       f"通过: {results['passed_tests']}\n" \
                                                                                                                       f"失败: {results['failed_tests']}\n" \
                                                                                                                       f"跳过: {results['skipped_tests']}"
-    # send_message_to_feishu(feishu_hook_url, result_message)
+    send_message_to_feishu(feishu_hook_url, result_message)
     # 恢复标准输出和标准错误
     sys.stdout = sys.__stdout__
     sys.stderr = sys.__stderr__
