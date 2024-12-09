@@ -6,7 +6,7 @@ import requests
 import json as complexjson
 
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -70,9 +70,8 @@ class WebDriver:
     if platform.system() == 'Linux':
         # 指定 chromedriver 的路径
         print("当前环境是linux")
-        # service = ChromeService()
-        # driver = webdriver.Chrome(service=service, options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
-        driver = webdriver.Chrome(options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
+        service = Service(executable_path='/data/jenkins/workspace/ASP-IOC异常监控/chromedriver')
+        driver = webdriver.Chrome(service=service, options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
     else:
         print("当前环境是mac")
         driver = webdriver.Chrome(options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
