@@ -110,7 +110,7 @@ class WebDriver:
             # 等待直到元素可点击
             different_type = WebDriverWait(self.driver, 100).until(
                 # EC.presence_of_element_located((By.XPATH, "//a[contains(text(), '普通账号登录')]"))
-                EC.presence_of_element_located((By.CSS_SELECTOR, 'a[class*="on-click"]'))
+                EC.element_to_be_clickable((By.CSS_SELECTOR, 'a[class*="on-click"]'))
             )
             # different_type = self.driver.find_element(By.XPATH, "//*[text()='普通账号登录']")
             different_type.click()
