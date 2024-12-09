@@ -98,7 +98,7 @@ class WebDriver:
             def is_page_loaded(driver):
                 return driver.execute_script("return document.readyState") == "complete"
             # 等待页面加载完成
-            WebDriverWait(self.driver, 80).until(is_page_loaded)
+            # WebDriverWait(self.driver, 80).until(is_page_loaded)
             # 切换为普通账号模式
             iframe_element = self.driver.find_element(By.TAG_NAME, "iframe")
             # 通过 WebElement 切换到 iframe
@@ -123,7 +123,7 @@ class WebDriver:
             def input_is_complete(driver):
                 # 假设输入完成的条件是输入框的内容长度大于0
                 return len(password_input.get_attribute("value")) > 0
-            WebDriverWait(self.driver, 30).until(input_is_complete)
+            # WebDriverWait(self.driver, 30).until(input_is_complete)
             time.sleep(2)
             login_button.click()
             time.sleep(60)
