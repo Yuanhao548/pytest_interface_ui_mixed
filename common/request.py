@@ -109,7 +109,8 @@ class WebDriver:
             print("已进入切换框架")
             # 等待直到元素可点击
             different_type = WebDriverWait(self.driver, 100).until(
-                EC.presence_of_element_located((By.XPATH, "//a[text()='普通账号登录']"))
+                EC.presence_of_element_located((By.XPATH, "//a[contains(text(), '普通账号登录')]"))
+                # EC.presence_of_element_located((By.CSS_SELECTOR, "a[text()='普通账号登录']"))
             )
             # different_type = self.driver.find_element(By.XPATH, "//*[text()='普通账号登录']")
             different_type.click()
