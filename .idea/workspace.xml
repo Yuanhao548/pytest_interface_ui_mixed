@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26c87c05-f024-49c5-9d0b-62b37f83499f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/generate_cases_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ams/ioc.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setting.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testCases/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testCases/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/amsApiAutoTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/amsApiAutoTest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

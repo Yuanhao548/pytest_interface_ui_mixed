@@ -70,7 +70,7 @@ class WebDriver:
     if platform.system() == 'Linux':
         # 指定 chromedriver 的路径
         print("当前环境是linux")
-        service = Service(executable_path='/data/jenkins/workspace/ASP-IOC异常监控/chromedriver')
+        service = Service(executable_path='/data/jenkins/workspace/ASP-IOC异常监控/chromedriver/chromedriver')
         driver = webdriver.Chrome(service=service, options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
     else:
         print("当前环境是mac")
