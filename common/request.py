@@ -99,10 +99,11 @@ class WebDriver:
             WebDriverWait(self.driver, 100).until(is_page_loaded)
             print('已进入登陆页面', self.driver.current_url)
             # 切换为普通账号模式
-            iframe_element = WebDriverWait(self.driver, 100).until(
-                EC.element_to_be_clickable((By.TAG_NAME, "iframe"))
-            )
-            # iframe_element = self.driver.find_element(By.TAG_NAME, "iframe")
+            # iframe_element = WebDriverWait(self.driver, 100).until(
+            #     EC.element_to_((By.TAG_NAME, "iframe"))
+            # )
+            iframe_element = self.driver.find_element(By.TAG_NAME, "iframe")
+            print("已找到iframe元素")
             # 通过 WebElement 切换到 iframe
             self.driver.switch_to.frame(iframe_element)
             print("已进入切换框架")
