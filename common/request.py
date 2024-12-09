@@ -103,7 +103,6 @@ class WebDriver:
             #     EC.element_to_((By.TAG_NAME, "iframe"))
             # )
             iframe_element = self.driver.find_element(By.TAG_NAME, "iframe")
-            print("已找到iframe元素")
             # 通过 WebElement 切换到 iframe
             self.driver.switch_to.frame(iframe_element)
             print("已进入切换框架")
@@ -114,6 +113,7 @@ class WebDriver:
             # )
             time.sleep(3)
             different_type = self.driver.find_element(By.CSS_SELECTOR, 'a[class*="on-click"]')
+            print("已找到different_type元素")
             different_type.click()
             print('已完成框架切换')
             # 输入用户名和密码
