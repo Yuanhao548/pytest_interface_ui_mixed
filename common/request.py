@@ -70,7 +70,7 @@ class WebDriver:
     if platform.system() == 'Linux':
         # 指定 chromedriver 的路径
         print("当前环境是linux")
-        service = ChromeService()
+        # service = ChromeService()
         # driver = webdriver.Chrome(service=service, options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
         driver = webdriver.Chrome(options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
     else:
