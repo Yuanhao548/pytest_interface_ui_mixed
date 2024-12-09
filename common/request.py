@@ -97,11 +97,15 @@ class WebDriver:
                 return driver.execute_script("return document.readyState") == "complete"
             # 等待页面加载完成
             WebDriverWait(self.driver, 100).until(is_page_loaded)
-            print('已进入登陆页面')
+            print('已进入登陆页面', self.driver.current_url)
             # 切换为普通账号模式
-            iframe_element = self.driver.find_element(By.TAG_NAME, "iframe")
+            iframe_element = WebDriverWait(self.driver, 100).until(
+                EC.element_to_be_clickable((By.TAG_NAME, "iframe"))
+            )
+            # iframe_element = self.driver.find_element(By.TAG_NAME, "iframe")
             # 通过 WebElement 切换到 iframe
             self.driver.switch_to.frame(iframe_element)
+            print("已进入切换框架")
             # 等待直到元素可点击
             different_type = WebDriverWait(self.driver, 100).until(
                 EC.element_to_be_clickable((By.XPATH, "//*[text()='普通账号登录']"))
