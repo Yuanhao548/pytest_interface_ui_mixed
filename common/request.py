@@ -113,6 +113,7 @@ class WebDriver:
             # )
             time.sleep(3)
             different_type = self.driver.find_element(By.CSS_SELECTOR, 'a[class*="on-click"]')
+            self.driver.execute_script("arguments[0].click();", different_type)
             print("已找到different_type元素")
             different_type.click()
             print('已完成框架切换')
