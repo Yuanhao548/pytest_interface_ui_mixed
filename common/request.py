@@ -108,11 +108,12 @@ class WebDriver:
             self.driver.switch_to.frame(iframe_element)
             print("已进入切换框架")
             # 等待直到元素可点击
-            different_type = WebDriverWait(self.driver, 100).until(
-                # EC.presence_of_element_located((By.XPATH, "//a[contains(text(), '普通账号登录')]"))
-                EC.element_to_be_clickable((By.CSS_SELECTOR, 'a[class*="on-click"]'))
-            )
-            # different_type = self.driver.find_element(By.XPATH, "//*[text()='普通账号登录']")
+            # different_type = WebDriverWait(self.driver, 100).until(
+            #     # EC.presence_of_element_located((By.XPATH, "//a[contains(text(), '普通账号登录')]"))
+            #     EC.element_to_be_clickable((By.CSS_SELECTOR, 'a[class*="on-click"]'))
+            # )
+            time.sleep(3)
+            different_type = self.driver.find_element(By.CSS_SELECTOR, 'a[class*="on-click"]')
             different_type.click()
             print('已完成框架切换')
             # 输入用户名和密码
