@@ -102,7 +102,11 @@ class WebDriver:
             iframe_element = self.driver.find_element(By.TAG_NAME, "iframe")
             # 通过 WebElement 切换到 iframe
             self.driver.switch_to.frame(iframe_element)
-            different_type = self.driver.find_element(By.XPATH, "//*[text()='普通账号登录']")
+            # 等待直到元素可点击
+            different_type = WebDriverWait(self.driver, 100).until(
+                EC.element_to_be_clickable((By.XPATH, "//*[text()='普通账号登录']"))
+            )
+            # different_type = self.driver.find_element(By.XPATH, "//*[text()='普通账号登录']")
             different_type.click()
             print('已完成框架切换')
             # 输入用户名和密码
