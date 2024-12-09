@@ -112,9 +112,8 @@ class WebDriver:
             #     EC.element_to_be_clickable((By.CSS_SELECTOR, 'a[class*="on-click"]'))
             # )
             different_type = self.driver.find_element(By.CSS_SELECTOR, 'a[class*="on-click"]')
-            self.driver.execute_script("arguments[0].scrollIntoView(true);", different_type)
-            print("已找到different_type元素")
-            different_type.click()
+            self.driver.execute_script("arguments[0].click()", different_type)
+            # different_type.click()
             print('已完成框架切换')
             # 输入用户名和密码
             username_input = self.driver.find_element(By.ID, "namelogin")
