@@ -112,9 +112,9 @@ class WebDriver:
             #     EC.element_to_be_clickable((By.CSS_SELECTOR, 'a[class*="on-click"]'))
             # )
             different_type = self.driver.find_element(By.CSS_SELECTOR, 'a[class*="on-click"]')
+            # 通过执行javascript脚本触发改click事件
             self.driver.execute_script("arguments[0].click()", different_type)
             # different_type.click()
-            print('已完成框架切换')
             # 输入用户名和密码
             username_input = self.driver.find_element(By.ID, "namelogin")
             password_input = self.driver.find_element(By.ID, "passwordlogin")
@@ -123,10 +123,9 @@ class WebDriver:
             #     const input = arguments[0];
             #     input.removeEventListener('input', handleInput);
             # """, username_input)
-            print('开始输入账号密码')
             username_input.send_keys(self.user_name)
             password_input.send_keys(self.pass_word)
-            print('已完成输入')
+            print('已完成账号密码输入')
             login_button = self.driver.find_element(By.XPATH, "//div//button[contains(@class, 'submit-button')]")
             # 等待用户输入完成
             def input_is_complete(driver):

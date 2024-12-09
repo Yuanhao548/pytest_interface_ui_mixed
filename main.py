@@ -57,8 +57,8 @@ def main():
     result_path = os.path.join(project_path, 'run_result', f'{datetime.now().date()}test_output.txt')
     with open(result_path, 'w') as f:
         # 重定向标准输出和标准错误
-        # sys.stdout = f
-        # sys.stderr = f
+        sys.stdout = f
+        sys.stderr = f
         # 运行测试
         pytest.main(['-s', '-v', 'testCases/', '--tb=long', '--junit-xml=test_results.xml'])
         # pytest.main(['-s', '-v', '--reruns', '3', 'testCases/'])
