@@ -73,7 +73,7 @@ def main():
                                                                                                                       f"通过: {results['passed_tests']}\n" \
                                                                                                                       f"失败: {results['failed_tests']}\n" \
                                                                                                                       f"跳过: {results['skipped_tests']}"
-    send_message_to_feishu(feishu_hook_url, result_message)
+    # send_message_to_feishu(feishu_hook_url, result_message)
     # 恢复标准输出和标准错误
     sys.stdout = sys.__stdout__
     sys.stderr = sys.__stderr__
