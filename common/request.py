@@ -114,6 +114,7 @@ class WebDriver:
             #     const input = arguments[0];
             #     input.removeEventListener('input', handleInput);
             # """, username_input)
+            print('开始输入账号密码')
             username_input.send_keys(self.user_name)
             password_input.send_keys(self.pass_word)
             print('已完成输入')
