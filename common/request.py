@@ -88,17 +88,16 @@ class WebDriver:
         print(f"ChromeDriver Version: {version}")
 
         selenium_cookies = None
-        self.driver.implicitly_wait(100)
+        # self.driver.implicitly_wait(100)
         try:
             # 访问登录页面
             self.driver.get(self.login_page)
-            print('已进入登陆页面')
-
             # 使用JavaScript检查页面加载状态
             def is_page_loaded(driver):
                 return driver.execute_script("return document.readyState") == "complete"
             # 等待页面加载完成
-            WebDriverWait(self.driver, 80).until(is_page_loaded)
+            WebDriverWait(self.driver, 100).until(is_page_loaded)
+            print('已进入登陆页面')
             # 切换为普通账号模式
             iframe_element = self.driver.find_element(By.TAG_NAME, "iframe")
             # 通过 WebElement 切换到 iframe
