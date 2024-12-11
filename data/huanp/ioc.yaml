@@ -1,0 +1,44 @@
+module_info:
+  project: huanp
+  module_name: f"test_module_name_{mode_i}"
+  case_infos:
+    - {
+        "case_name": "test_case_{case_i}",
+        "api": "/ipark-ioc/electric/tenant/statistics",
+        "method": "POST",
+        "request_data": {"parkCode":"23018"},
+        "assert_data": {
+          "success": true,
+          "result.yesterdayTenantElectricQuantity": "${>}10000",
+        },
+        "store_var" : {},
+        "headers" : {
+          "content_type": "application/json;charset=UTF-8",
+        },
+        "allure_info": {
+          "story": "西安园区IOC",
+          "description": "查看IOC昨日用电量",
+          "title": "西安环普园区IOC园区管理的昨日租户用电量与以往相比相差过大"
+        }
+      }
+    - {
+        "case_name": "test_case_{case_i}",
+        "api": "/ipark-ioc/inout/vehicleNumber",
+        "method": "POST",
+        "request_data": {parkCode: "23018"},
+        "assert_data": {
+          "success": null,
+          "result.enterParkVehicleNumber": "${>}100",
+          "result.inParkVehicleNumber": "${>}100",
+          "result.leaveParkVehicleNumber": "${>}100"
+        },
+        "store_var": {},
+        "headers": {
+          "content_type": "application/json;charset=UTF-8",
+        },
+        "allure_info": {
+          "story": "西安园区IOC",
+          "description": "查看IOC今日车辆",
+          "title": "西安环普园区IOC园区运营中的今日车辆进、出、在园数量和以往相比相差过大"
+        }
+      }

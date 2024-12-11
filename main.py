@@ -14,7 +14,7 @@ from common.request import send_message_to_feishu
 # from common.generate_cases_file import generate_case
 
 project_path = pathlib.Path(__file__).parents[0].resolve()
-feishu_hook_url = 'https://open.feishu.cn/open-apis/bot/v2/hook/c8ea4ee8-d1ce-4d09-b95c-865cfc3d2aae'
+feishu_hook_url = 'https://open.feishu.cn/open-apis/bot/v2/hook/784aba82-8fb7-41c0-b8b1-cda7eae6b6d6'
 
 # Press the green button in the gutter to run the script.
 def parse_test_results(xml_file):
@@ -63,20 +63,21 @@ def main():
         pytest.main(['-s', '-v', 'testCases/', '--tb=long', '--junit-xml=test_results.xml'])
         # pytest.main(['-s', '-v', '--reruns', '3', 'testCases/'])
     results = parse_test_results('test_results.xml')
-    result_message = "自动化测试结果:\n" \
-                     f"总测试数: {results['total_tests']}\n" \
+    today = datetime.today().date()
+    result_message = f"{today}IOC接口监控结果:\n" \
+                     f"总执行用例数: {results['total_tests']}\n" \
                      f"通过: {results['passed_tests']}\n" \
                      f"失败: {results['failed_tests']}\n" \
                      f"跳过: {results['skipped_tests']}\n" \
-                     f"\n失败用例详情：\n{''.join(results['failed_tests_info'])}" if results['failed_tests_info'] else "自动化测试结果:\n" \
-                                                                                                                      f"总测试数: {results['total_tests']}\n" \
+                     f"\n失败接口原因：\n{''.join(results['failed_tests_info'])}" if results['failed_tests_info'] else f"{today}IOC接口监控结果:\n" \
+                                                                                                                      f"总执行用例数: {results['total_tests']}\n" \
                                                                                                                       f"通过: {results['passed_tests']}\n" \
                                                                                                                       f"失败: {results['failed_tests']}\n" \
                                                                                                                       f"跳过: {results['skipped_tests']}"
     send_message_to_feishu(feishu_hook_url, result_message)
     # 恢复标准输出和标准错误
-    sys.stdout = sys.__stdout__
-    sys.stderr = sys.__stderr__
+    # sys.stdout = sys.__stdout__
+    # sys.stderr = sys.__stderr__
 
 
 if __name__ == '__main__':

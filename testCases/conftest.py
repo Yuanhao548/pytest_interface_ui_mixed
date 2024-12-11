@@ -6,24 +6,27 @@ from common.request import RestClient, web_login
 from main import project_path
 
 cache = Cache()
+req_dict = dict()
+request_infos_dict = dict()
 setting_ini = load_ini(os.path.join(project_path, 'setting.ini'))
-domin_name = setting_ini['host']['domin_name']
-user_name = setting_ini['host']['user_name']
-pass_word = setting_ini['host']['pass_word']
-req = RestClient(domin_name)
-
+for k, v in setting_ini.items():
+    rc = RestClient(v['domin_name'])
+    request_infos_dict[k] = [v['domin_name'], v['user_name'], v['pass_word'], rc]
+    req_dict[k] = rc
 
 @pytest.fixture(scope='session', autouse=True)
 def session_fixture():
-    web_login(domin_name, user_name, pass_word, req)
+    for v in request_infos_dict.values():
+        web_login(v[0], v[1], v[2], v[3])
     yield
     print('执行后的存储数据为：', cache.get_cache_dict())
 
 @pytest.fixture(scope='function')
 def sample_fixture():
-    yield req, cache
+    yield req_dict, cache
     if cache.get_cache('response_status_code') == 401:
-        web_login(domin_name, user_name, pass_word, req)
+        request_info = request_infos_dict[cache.get_cache('project')]
+        web_login(request_info[0], request_info[1], request_info[2], request_info[3])
     else:
         pass
 

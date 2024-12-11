@@ -66,16 +66,7 @@ class RestClient:
 
 
 class WebDriver:
-    # 配置Selenium WebDriver
-    if platform.system() == 'Linux':
-        # 指定 chromedriver 的路径
-        print("当前环境是linux")
-        service = Service(executable_path="/opt/chromedriver/chromedriver")
-        driver = webdriver.Chrome(service=service, options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
-    else:
-        print("当前环境是mac")
-        driver = webdriver.Chrome(options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
-        # driver = webdriver.Chrome()  # 请确保已安装ChromeDriver,显式启动浏览器
+    driver = None
 
     def __init__(self, login_page, user_name, pass_word):
         self.login_page = login_page
@@ -83,6 +74,16 @@ class WebDriver:
         self.pass_word = pass_word
 
     def login(self):
+        # 配置Selenium WebDriver
+        if platform.system() == 'Linux':
+            # 指定 chromedriver 的路径
+            print("当前环境是linux")
+            service = Service(executable_path="/opt/chromedriver/chromedriver")
+            self.driver = webdriver.Chrome(service=service, options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
+        else:
+            print("当前环境是mac")
+            self.driver = webdriver.Chrome(options=chrome_options)  # 请确保已安装ChromeDriver,隐式启动浏览器
+            # driver = webdriver.Chrome()  # 请确保已安装ChromeDriver,显式启动浏览器
         # 获取 ChromeDriver 的版本号
         version = self.driver.capabilities['chrome']['chromedriverVersion']
         print(f"ChromeDriver Version: {version}")

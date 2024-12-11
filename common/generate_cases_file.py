@@ -43,6 +43,7 @@ def generate_case(project_path):
                 module_info = yaml_data.get('module_info', None)
                 module_name = eval(module_info.get('module_name', None)) + '.py'
                 case_infos = module_info.get('case_infos', None)
+                project = module_info.get('project', None)
                 if not case_infos:
                     raise Exception('测试数据格式有误')
                 cases_file_info = '''
@@ -58,17 +59,19 @@ from common.process_response import get_json_value_by_path, assert_func
 @allure.story("{case_info['allure_info']['story']}")
 @allure.description("{case_info['allure_info']['description']}")
 @allure.title("{case_info['allure_info']['title']}")
-@pytest.mark.parametrize("api,method,request_data,assert_data,headers,store_var", [("{case_info['api']}","{case_info['method']}",{case_info['request_data']},{case_info['assert_data']},{case_info['headers']},{case_info['store_var']})])
-def test_case_{case_i}(sample_fixture, api, method, request_data, assert_data, headers, store_var):
+@pytest.mark.parametrize("api,method,request_data,assert_data,headers,store_var,project", [("{case_info['api']}","{case_info['method']}",{case_info['request_data']},{case_info['assert_data']},{case_info['headers']},{case_info['store_var']},"{project}")])
+def test_case_{case_i}(sample_fixture, api, method, request_data, assert_data, headers, store_var, project):
     print('开始执行测试用例')
-    req, cache = sample_fixture
+    req_dict, cache = sample_fixture
     cache_dict = cache.get_cache_dict()
     # 遍历替换参数中的变量
     variables = ''' + '''{'api': api, 'request_data': request_data}
     resolved_request_info = resolve_variable(variables, cache_dict)
     api, request_data = resolved_request_info['api'], resolved_request_info['request_data']
+    req = req_dict[project]
     response = req.request(url=api, method=method, data=request_data, headers=headers)
     cache.set_cache('response_status_code', response.status_code)
+    cache.set_cache('project', project)
     print(response.status_code)
     response_data = response.json()
     assert response.status_code == 200

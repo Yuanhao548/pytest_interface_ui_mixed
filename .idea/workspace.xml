@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26c87c05-f024-49c5-9d0b-62b37f83499f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/generate_cases_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/generate_cases_file.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/request.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ams/ioc.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/data/asp/ioc.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setting.ini" beforeDir="false" afterPath="$PROJECT_DIR$/setting.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testCases/ams/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testCases/ams/test_module_name_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testCases/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCases/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testCases/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCases/demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test_results.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,31 +44,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests for demo.test_example.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_module_name_1.test_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_module_name_1.test_case_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_module_name_1.test_case_2.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_module_name_1.py (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in test_module_name_1.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.core.executor&quot;: &quot;Run&quot;,
-    &quot;Python.demo (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.demo.executor&quot;: &quot;Run&quot;,
-    &quot;Python.generate_cases_file.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.request.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_module_name_1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hyuan2/project/amsApiAutoTest/data&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python tests.Python tests for demo.test_example.executor": "Run",
+    "Python tests.Python tests for test_module_name_1.test_1.executor": "Run",
+    "Python tests.Python tests for test_module_name_1.test_case_1.executor": "Run",
+    "Python tests.Python tests for test_module_name_1.test_case_2.executor": "Run",
+    "Python tests.Python tests in test_module_name_1.py (1).executor": "Run",
+    "Python tests.Python tests in test_module_name_1.py.executor": "Run",
+    "Python.core.executor": "Run",
+    "Python.demo (1).executor": "Run",
+    "Python.demo.executor": "Run",
+    "Python.generate_cases_file.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.request.executor": "Run",
+    "Python.test_module_name_1.executor": "Run",
+    "Python.utils.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/hyuan2/project/amsApiAutoTest/data/huanp",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/huanp" />
       <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -69,7 +80,7 @@
       <recent name="$PROJECT_DIR$/data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.demo (1)">
     <configuration name="demo (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="amsApiAutoTest" />
       <option name="ENV_FILES" value="" />

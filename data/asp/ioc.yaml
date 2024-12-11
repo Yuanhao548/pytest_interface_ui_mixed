@@ -1,4 +1,5 @@
 module_info:
+  project: asp
   module_name: f"test_module_name_{mode_i}"
   case_infos:
     - {
@@ -9,7 +10,6 @@ module_info:
           "parkExternalId": "529"
         },
         "assert_data": {
-
           "success": true,
           "result.enterParkVehicleNumber.total": "${>}0",
           "result.inParkVehicleNumber.total": "${>}0",
