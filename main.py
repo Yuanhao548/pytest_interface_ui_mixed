@@ -64,12 +64,12 @@ def main():
         # pytest.main(['-s', '-v', '--reruns', '3', 'testCases/'])
     results = parse_test_results('test_results.xml')
     today = datetime.today().date()
-    result_message = f"{today}IOC接口监控结果:\n" \
+    result_message = f"{today}日IOC接口监控结果:\n" \
                      f"总执行用例数: {results['total_tests']}\n" \
                      f"通过: {results['passed_tests']}\n" \
                      f"失败: {results['failed_tests']}\n" \
                      f"跳过: {results['skipped_tests']}\n" \
-                     f"\n失败接口原因：\n{''.join(results['failed_tests_info'])}" if results['failed_tests_info'] else f"{today}IOC接口监控结果:\n" \
+                     f"\n失败接口原因：\n{''.join(results['failed_tests_info'])}" if results['failed_tests_info'] else f"{today}日IOC接口监控结果:\n" \
                                                                                                                       f"总执行用例数: {results['total_tests']}\n" \
                                                                                                                       f"通过: {results['passed_tests']}\n" \
                                                                                                                       f"失败: {results['failed_tests']}\n" \
